@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin_dashboard.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="ipklogo.png" alt="School Logo" class="logo">
+    
+        <div class="nav-container">
+            <nav class="navigation">
+                <a href="#">Dashboard</a>
+                <a href="admin_event.html">Event</a>
+            </nav>
+    
+            <a href="#" class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 20a8 8 0 0 1 16 0"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <h2 class="welcome-text" id="welcome-text">Welcome, ADMIN_NAME!</h2>
+    <div class="dashboard-container">
+
+        <div class="notification-board">
+            <h3 class="notification-title">
+                <svg class="bell-icon" width="50" height="50" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 56c3 0 6-3 6-6H26c0 3 3 6 6 6zm18-14V30c0-8-5-14-12-16v-2a4 4 0 0 0-8 0v2c-7 2-12 8-12 16v14l-4 4v2h40v-2l-4-4z" 
+                          fill="red" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                </svg>                  
+                <span>Notification Board</span>
+            </h3>
+            
+            <ul id="announcement-list"></ul>
+
+            <div class="button-container">
+                <button class="add-btn">✚ADD</button>
+            </div>
+        </div>
+
+        <div id="addModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Announcement</h2>
+                <label for="addTitle">Title:</label>
+                <input type="text" id="addTitle" placeholder="Enter Title">
+                <label for="addDescription">Description:</label>
+                <textarea id="addDescription" placeholder="Enter Description"></textarea>
+                <button id="saveAdd">Save</button>
+            </div>
+        </div>
+        
+        <!-- Sidebar 放在这里 -->
+        <div class="sidebar">
+
+            <a href="admin_profile.html" class="side-item-link">
+                <div class="side-item">
+                    <img src="view profile icon.png" alt="Profile">
+                    <button>View details</button>
+                </div>
+            </a>
+        
+            <a href="admin_event_management.html" class="side-item-link">
+                <div class="side-item">
+                    <img src="event management logo.png" alt="Event Management">
+                    <button>View details</button>
+                </div>
+            </a>
+        
+            <a href="admin_user_management.html" class="side-item-link">
+                <div class="side-item">
+                    <img src="user management icon.png" alt="User Management">
+                    <button>View details</button>
+                </div>
+            </a>
+        </div>
+    </div>  
+    <script src="admin_dashboard.js"></script>   
+</body>
+</html>
+

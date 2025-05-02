@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html, body {
+    overflow: hidden;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-left: -40px;
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.navigation {
+    display: flex;
+    gap: 50px;
+    height: 100%;
+}
+
+.navigation a {
+    min-width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center; /* ✅ Vertically center the text */
+    justify-content: center; /* ✅ Horizontally center the text */
+    height: 100%;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation a::before {
+    content: "";
+    position: absolute;
+    inset: 0 -25px;
+    bottom: 0;
+    background-color: #5b5b5b;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navigation a:hover::before {
+    opacity: 1;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: default;
+}
+
+.profile-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: black;
+    transition: fill 0.3s ease-in-out;
+}
+
+@font-face {
+    font-family: 'Britannic Bold';
+    src: url(../../../../../WINDOWS/Fonts/BRITANIC.TTF) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.welcome-text {
+    font-size: 30px;
+    font-family: 'Britannic Bold', sans-serif;
+    margin-top: 115px; /* ✅ Ensure the "Welcome" text isn't covered by the header */
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: center; /* ✅ Center the content */
+    align-items: flex-start; /* ✅ Align them to the top */
+    gap: 70px; /* ✅ Adjust the spacing between the announcement and sidebar */
+    width: 80%; /* ✅ Limit the overall width to avoid excessive empty space on both sides */
+    margin: 37px auto 20px; /* ✅ Key point: Adjust margin-top to prevent overlap with the header */
+}
+
+.notification-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ Center the h2 text within the box */
+    text-align: center;
+    width: 900px;
+    height: 510px;
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 70px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 60px;
+    border: 3px solid black;
+    position: relative;
+    color: black;
+    
+}
+
+.notification-title {
+    display: flex;
+    align-items: center; /* ✅ Vertically center the bell icon and text */
+    justify-content: center; /* ✅ Horizontally center the bell icon and text */
+    gap: 10px; /* ✅ Add spacing between the bell icon and text */
+    font-size:20px;
+}
+
+.notification-title span {
+    font-family: "Elephant",sans-serif; /* ✅ Change the font family */
+    font-size: 30px; /* ✅ Adjust the font size */
+}
+
+.bell-icon {
+    width: 50px; /* ✅ Set an appropriate size */
+    height: 50px;
+    vertical-align: middle; /* ✅ Ensure the SVG doesn’t get misaligned */
+}
+
+#announcement-list {
+    overflow-wrap: break-word; /* Support modern browsers */
+    white-space: normal;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+    max-height: 100%;         /* Control the height and enable vertical scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+    white-space: pre-wrap;
+}
+
+#announcement-list hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    width: calc(100% + 40px); /* Make the hr element extend to accommodate the padding */
+    margin: 10px 0;
+    transform: translateX(-20px); /* Align to the left */
+}
+
+.sidebar {
+    width: 215px;  /* ✅ Ensure the sidebar is just slightly wider than the image */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;  /* Adjust the spacing */
+    align-items: center;
+    justify-content: center;
+    height: 510px;
+}
+
+.side-item-link {
+    text-decoration: none; /* Remove the underline */
+}
+
+
+.side-item {
+    width: 220px; /* ✅ Make the side-item adjust to the sidebar */
+    background: #adadad;
+    padding: 7px; /* ✅ Reduce padding to avoid it being too large */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* ✅ Center the internal content */
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-item img {
+    width: 100%;  /* Adjust the image width */
+    object-fit: contain; /* Ensure the image does not get distorted */
+}
+
+.side-item button {
+    width: 100%; /* ✅ Make the button the same width as the image */
+    background-color: black; /* ✅ Change the background color */
+    color: white; /* ✅ Change the font color */
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.side-item button:hover {
+    background-color: #5b5b5b; /* ✅ Change the color on hover */
+}

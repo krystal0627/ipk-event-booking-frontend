@@ -1,0 +1,113 @@
+body {/*Frame框架*/
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('fyp.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: red;
+    font-weight: bold;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
+}
+
+.wrapper {
+    margin-top: 170px;
+    position: relative;
+    width: 420px;
+    height: 300px;
+    font-family: 'Eras Demi ITC', sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+                url('ipkk.jpg');
+    background-size: cover;/* Makes the image fit the frame */
+    background-position: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;/* Rounded look圆的弧度 */
+    padding: 10px;/* Login frame size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: grey;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+    top: 0px;
+    font-size: 0.8em;
+    color: grey;
+}
+
+.input-box input {
+    font-size: 18px;
+    padding-left: 7px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-box::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;/* Move underline up */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #162938;
+}
+
+.input-box i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: grey;
+}
+
+.submitBtn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+}

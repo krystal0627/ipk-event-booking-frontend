@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html, body {
+    overflow: hidden;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-left: -40px;
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.navigation {
+    display: flex;
+    gap: 50px;
+    height: 100%;
+}
+
+.navigation a {
+    min-width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center; /* ✅ 让文字垂直居中 */
+    justify-content: center; /* ✅ 让文字水平居中 */
+    height: 100%;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation a::before {
+    content: "";
+    position: absolute;
+    inset: 0 -25px;
+    bottom: 0;
+    background-color: #5b5b5b;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navigation a:hover::before {
+    opacity: 1;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: default;
+}
+
+.profile-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: black;
+    transition: fill 0.3s ease-in-out;
+}
+
+/* Banner Image */
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Search Bar Overlay */
+.search-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+}
+
+/* Styling for Inputs & Button */
+#search {
+    padding: 8px;
+    width: 250px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#month-filter {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#search-btn {
+    padding: 8px 12px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-btn i {
+    font-size: 16px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Pushes h2 left and button right */
+    align-items: center; /* Centers them vertically */
+    margin: 2px 15px;
+}
+
+/* Ensure the h2 doesn't shrink */
+.header-container h2 {
+    font-family: "Merriweather", serif;
+    font-size: 22px;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+/* Adjust button styling */
+.button-container {
+    margin: 0; /* Remove extra margins */
+}
+
+#create-event-btn {
+    background-color: #a800a8;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: 1px solid #a800a889;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(81, 79, 81, 0.5); /* Initial glow */
+}
+
+#create-event-btn i {
+    font-size: 20px;
+}
+
+#create-event-btn:hover {
+    background-color: #8a008a;
+}
+
+.event-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.event-card img:hover {
+    transform: scale(1.03);
+}

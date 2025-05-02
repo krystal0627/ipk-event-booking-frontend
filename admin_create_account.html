@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Create Account</title>
+    <link rel="stylesheet" href="admin_create_account.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Account</h1>
+        <form id="createAccountForm" autocomplete="off">
+
+            <input type="hidden" name="fake_username" autocomplete="username">
+            <input type="hidden" name="fake_password" autocomplete="current-password">
+
+            <div class="row">
+                <label for="name">Name*:</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="user_id">User ID*:</label>
+                    <input type="text" name="user_id" required>
+                </div>
+                <div class="column">
+                    <label for="class">Class:</label>
+                    <input type="text" name="class">
+                </div>
+            </div>
+            <div class="row">
+                <label for="email">Email Address*:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="contact_no">Contact No.*:</label>
+                    <input type="text" name="contact_no" placeholder="000-00000000" required>
+                </div>
+                <div class="column">
+                    <label for="role">Roles*:</label>
+                    <select name="role" required>
+                        <option value="">Select</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Student">Student</option>
+                        <option value="Event Organizer">Event Organizer</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row two-column-row">
+                <div class="column">
+                    <label for="emergency_contact">Emergency Contact:</label>
+                    <input type="text" name="emergency_contact" placeholder="000-00000000">
+                </div>
+                <div class="column">
+                    <label for="password">Password*:</label>
+                    <input type="password" name="password" maxlength="6" required>
+                </div>
+            </div>            
+
+            <div class="buttons">
+                <a href="admin_user_management.html" class="back-btn">Go Back</a>
+                <button type="submit">CREATE</button>
+            </div>
+        </form>
+    </div>
+    <script src="admin_create_account.js"></script>
+</body>
+</html>

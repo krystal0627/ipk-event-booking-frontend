@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html, body {
+    overflow: hidden;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-left: -40px;
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.navigation {
+    display: flex;
+    gap: 50px;
+    height: 100%;
+}
+
+.navigation a {
+    min-width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center; /* ✅ Vertically center the text */
+    justify-content: center; /* ✅ Horizontally center the text */
+    height: 100%;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation a::before {
+    content: "";
+    position: absolute;
+    inset: 0 -25px;
+    bottom: 0;
+    background-color: #5b5b5b;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navigation a:hover::before {
+    opacity: 1;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: default;
+}
+
+.profile-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: black;
+    transition: fill 0.3s ease-in-out;
+}
+
+@font-face {
+    font-family: 'Britannic Bold';
+    src: url(../../../../../WINDOWS/Fonts/BRITANIC.TTF) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.welcome-text {
+    font-size: 30px;
+    font-family: 'Britannic Bold', sans-serif;
+    margin-top: 115px; /* ✅ Ensure the "Welcome" text is not blocked by the header */
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: center; /* ✅ Center the content */
+    align-items: flex-start; /* ✅ Align them to the top */
+    gap: 90px; /* ✅ Adjust the spacing between the announcement and the sidebar */
+    width: 80%; /* ✅ Limit the total width to avoid too much blank space on both sides */
+    margin: 37px auto 20px; /* ✅ Key: Adjust margin-top to prevent them from overlapping the header */
+}
+
+.notification-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ Center the h2 heading inside the box */
+    text-align: center;
+    width: 900px;
+    height: 510px;
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 70px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 60px;
+    border: 3px solid black;
+    position: relative;
+    color: black;
+    
+}
+
+.notification-title {
+    display: flex;
+    align-items: center; /* ✅ Vertically center the bell icon and the text */
+    justify-content: center; /* ✅ Horizontally center them */
+    gap: 10px; /* ✅ Add spacing between the bell icon and the text */
+    font-size:20px;
+}
+
+.notification-title span {
+    font-family: "Elephant",sans-serif; /* ✅ Change the font family */
+    font-size: 30px; /* ✅ Change the font size */
+}
+
+.bell-icon {
+    width: 50px; /* ✅ Set appropriate dimensions */
+    height: 50px;
+    vertical-align: middle; /* ✅ Ensure the SVG doesn't shift */
+}
+
+#announcement-list {
+    overflow-wrap: break-word; /* Target modern browsers */
+    white-space: normal;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+    max-height: 100%;         /* Control height with vertical scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+    white-space: pre-wrap;
+}
+
+#announcement-list hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    width: calc(100% + 40px); /* Extend the hr to match the padding */
+    margin: 10px 0;
+    transform: translateX(-20px); /* Align to the left */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🎨 Separate styles for the Add Modal */
+#addModal .modal-content {
+    background-color: #e0e0e0;
+    padding: 25px;
+    border-radius: 10px;
+    width: 600px;
+    height: 530px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.close {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*model title*/
+label {
+    text-align: left;      /* Ensure text is left-aligned */
+    display: block;        /* Each label should occupy a single line */
+    font-size: 16px;       /* Set font size */
+    font-weight: bold;     /* Make the font bold */
+    margin-bottom: 5px;    /* Add space between the label and input box */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    resize: none;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 16px;
+    font-family:Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #5b5b5b;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px; /* Add spacing between buttons */
+    margin-top: auto; /* Maintain spacing with the announcement list above */
+}
+
+.add-btn {
+    width: 100px;
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.add-btn:hover {
+    background: #5b5b5b;
+}
+
+.sidebar {
+    width: 195px;  /* ✅ Make the sidebar only slightly wider than the image */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  /* Adjust spacing */
+    align-items: center; /* ✅ Center the content */
+    margin-top: -20px;
+}
+
+.side-item-link {
+    text-decoration: none; /* Remove underlines */
+}
+
+.side-item {
+    width: 200px; /* ✅ Make side-item adapt to the sidebar width */
+    background: #adadad;
+    padding: 7px; /* ✅ Reduce padding so it’s not too large */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* ✅ Center its internal content */
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-item img {
+    width: 100%;  /* Adjust image width */
+    object-fit: contain; /* Ensure images do not distort */
+}
+
+.side-item button {
+    width: 100%; /* ✅ Make the button width match the image width */
+    background-color: black; /* ✅ Change background color */
+    color: white; /* ✅ Change font color */
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.side-item button:hover {
+    background-color: #5b5b5b; /* ✅ Set hover color */
+}

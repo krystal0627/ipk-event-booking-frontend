@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin User Management</title>
+    <link rel="stylesheet" href="admin_user_management.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="ipklogo.png" alt="School Logo" class="logo">
+    
+        <div class="nav-container">
+            <nav class="navigation">
+                <a href="admin_dashboard.html">Dashboard</a>
+                <a href="admin_event.html">Event</a>
+            </nav>
+    
+            <a href="#" class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 20a8 8 0 0 1 16 0"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+        <h1>User Management</h1>
+        <button id="create-user-btn">
+            <i class="fas fa-plus-circle"></i>
+        </button>        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Class</th>
+                        <th>Roles</th>
+                        <th>Contact No</th>
+                        <th>Emergency Contact</th>
+                        <th>Password</th>
+                        <th>Participants Record</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                    <!-- Dynamic user data population -->
+                </tbody>
+            </table>
+        </div>     
+    </main>
+    <script src="admin_user_management.js"></script>
+</body>
+</html>

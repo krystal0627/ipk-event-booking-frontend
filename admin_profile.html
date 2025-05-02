@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="admin_profile.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="ipklogo.png" alt="School Logo" class="logo">
+    
+        <div class="nav-container">
+            <nav class="navigation">
+                <a href="admin_dashboard.html">Dashboard</a>
+                <a href="admin_event.html">Event</a>
+            </nav>
+    
+            <a href="#" class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 20a8 8 0 0 1 16 0"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+        <h2>My Profile</h2>
+        <div class="profile-container">
+            <div class="profile-left">
+                <i class="fas fa-user-circle"></i>
+                <h3 id="admin-name">ADMIN NAME</h3>
+            </div>
+    
+            <!-- The divider can be kept -->
+            <div class="divider"></div>
+    
+            <div class="profile-right">
+                <p><strong>Admin ID:</strong> <span id="admin-id"></span></p>
+                <p><strong>Email Address:</strong> <span id="email-address"></span></p>
+                <p><strong>Contact No.:</strong> <input type="text" id="contact-no"></p>
+                <p><strong>Emergency Contact:</strong> <input type="text" id="emergency-contact"></p>
+                <p><strong>Roles:</strong> <span id="roles"></span></p>
+                <button id="save-btn">Save Changes</button>
+            </div>
+        </div>
+    
+        <button id="logout-btn">Sign Out</button>
+    </main>    
+
+    <script src="admin_profile.js"></script>
+    
+</body>
+</html>
+

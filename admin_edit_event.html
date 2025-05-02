@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Edit Event</title>
+    <link rel="stylesheet" href="admin_edit_event.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Edit Event</h1>
+        <form id="eventForm" enctype="multipart/form-data">
+            <div class="form-left">
+                <label>Event Name*<input type="text" id="event_name" name="event_name" placeholder="Type here" required></label>
+                <label>Venue*<input type="text" id="venue" name="venue" placeholder="Type here" required></label>
+                <label>Contact Person*<textarea id="contact_person" name="contact_person" rows="7" required></textarea></label>
+            </div>
+
+            <div class="form-right">
+                <label>Date*<input type="date" id="date" name="date" required></label>
+                <label>Event Type*
+                    <select id="event_type" name="event_type" required>
+                        <option value="">Select</option>
+                        <option value="General">General</option>
+                        <option value="CSR">CSR</option>
+                    </select>
+                </label>
+                <label>Fee per pax (if applicable)
+                    <div class="fee-input">
+                        <span>RM</span>
+                        <input type="text" id="fee" name="fee" pattern="\d+(\.\d{1,2})?" placeholder="00.00">
+                    </div>
+                </label>
+                <div class="upload-wrapper">
+                    <label class="upload-text">Upload image/poster*</label>
+                    <label for="posterUpload" class="icon-label">
+                        <i class="fas fa-image"></i>
+                        <input type="file" id="posterUpload" name="posterUpload" accept="image/*">
+                    </label>
+                </div>                                             
+            </div>
+
+            <div class="form-bottom">
+                <label>Description*<textarea id="description" name="description" rows="6" required></textarea></label>
+            </div>
+
+            <div class="form-buttons">
+                <a href="admin_event_management.html" class="back-btn">Go Back</a>
+                <button type="submit" class="save-btn">SAVE</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="admin_edit_event.js"></script>
+</body>
+</html>

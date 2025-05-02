@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-left: -40px;
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.navigation {
+    display: flex;
+    gap: 50px;
+    height: 100%;
+}
+
+.navigation a {
+    min-width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation a::before {
+    content: "";
+    position: absolute;
+    inset: 0 -25px;
+    bottom: 0;
+    background-color: #5b5b5b;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navigation a:hover::before {
+    opacity: 1;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: default;
+}
+
+.profile-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: black;
+    transition: fill 0.3s ease-in-out;
+}
+
+h1 {
+    font-family: 'ADLaM Display', cursive;
+    font-size: 36px;
+    margin-top: 90px;
+    padding: 5px 50px;
+}
+
+.table-container {
+    max-height: 550px; /* Set maximum height */
+    overflow-y: auto;  /* Show vertical scrollbar when content exceeds height */
+    margin: 0 auto;
+    width: 100%; /* Maintain original width */
+    background-color: white;
+    border-top: none;
+}
+
+table {
+    width: 92%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background: #bde0fe;
+}
+
+#create-event-btn {
+    float: right;
+    margin: -45px 80px 10px -120px; /* Adjust spacing to match header alignment */
+    background: transparent;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#create-event-btn i {
+    font-size: 30px;
+    color: purple;
+}

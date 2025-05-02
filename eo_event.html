@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Organizer Event</title>
+    <link rel="stylesheet" href="eo_event.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="ipklogo.png" alt="School Logo" class="logo">
+    
+        <div class="nav-container">
+            <nav class="navigation">
+                <a href="eo_dashboard.html">Dashboard</a>
+                <a href="#">Event</a>
+            </nav>
+    
+            <a href="#" class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 20a8 8 0 0 1 16 0"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Banner Image with Overlay -->
+        <div class="banner-container">
+            <img src="event_picture.png" alt="Event Banner" class="banner-image">
+            <div class="search-overlay">
+                <input type="text" id="search" placeholder="Search event or keyword">
+                <select id="month-filter">
+                    <option value="">Month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    
+        <div class="header-container">
+            <h2>Explore Exciting Events and Activities at IPK College!</h2>
+            <div class="button-container">
+                <button id="create-event-btn">
+                    <i class="fas fa-plus-circle"></i> Create Event
+                </button>
+            </div>
+            </div>
+        <div class="event-cards-container" id="eventCardsContainer"></div>
+    </main>
+    <script src="eo_event.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-left: -40px;
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.navigation {
+    display: flex;
+    gap: 50px;
+    height: 100%;
+}
+
+.navigation a {
+    min-width: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigation a::before {
+    content: "";
+    position: absolute;
+    inset: 0 -25px;
+    bottom: 0;
+    background-color: #5b5b5b;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navigation a:hover::before {
+    opacity: 1;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: default;
+}
+
+.profile-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: black;
+    transition: fill 0.3s ease-in-out;
+}
+
+h2 {
+    font-family: 'ADLaM Display', cursive;
+    font-size: 46px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-left i {
+    font-size: 180px;
+    color: black;
+    margin-top: 20px;
+}
+
+.profile-container p {
+    margin: 5px 0;
+}
+
+.profile-left a {
+    color: blue;
+    text-decoration: none;
+}
+
+#admin-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    height: 100%;
+}
+
+.profile-right {
+    display: grid;
+    grid-template-columns: 200px auto;
+    gap: 15px;
+    background: transparent;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 350px;
+    font-size: 20px; /* ✅ 修改字体大小 */
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.profile-right p {
+    display: contents;
+}
+
+.profile-right input {
+    text-align: left;
+    width: 80%;
+    font-size: 18px;
+    background: transparent;
+    border: 2px solid black;
+    padding: 2px 5px; 
+    border-radius: 5px;
+    outline: none;
+}
+
+#logout-btn {
+    display: block;
+    margin: 20px auto 10px auto;
+    width: 140px;
+    height: 50px;
+    font-family: "Microsoft YaHei UI", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #00B050;
+    color: white;
+    border: 2px solid #3B7D23;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
